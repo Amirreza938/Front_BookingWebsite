@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود و ثبت نام</title>
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">سفرینو</div>
+            <ul>
+                <li><a href="home.html">صفحه اصلی</a></li>
+                <li><a href="search.html">جستجو</a></li>
+                <li><a href="review.html">نقد و بررسی</a></li>
+                <li><a href="profile.html">پروفایل</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="auth-container">
+                <div id="login"></div>
+                <div id="signup"></div>
+                
+                <div class="auth-tabs">
+                    <a href="#login" class="tab-btn active">ورود</a>
+                    <a href="#signup" class="tab-btn">ثبت نام</a>
+                </div>
+                
+                <div class="form-container login-form">
+                    <h2>ورود به حساب کاربری</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="login-email">ایمیل:</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">رمز عبور:</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">ورود</button>
+                    </form>
+                    <p class="forget-password"><a href="#">رمز عبور خود را فراموش کرده‌اید؟</a></p>
+                </div>
+                
+                <div class="form-container signup-form">
+                    <h2>ایجاد حساب کاربری</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="signup-email">ایمیل:</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">رمز عبور:</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">تایید رمز عبور:</label>
+                            <input type="password" id="confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">ثبت نام</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سفرینو</h3>
+                    <p>بهترین سایت رزرو هتل، پرواز و تجربه‌های سفر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>پشتیبانی</h3>
+                    <ul>
+                        <li><a href="help.html">راهنما</a></li>
+                        <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                        <li><a href="tel:+982100000000">تلفن: ۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+                        <li><a href="mailto:info@safarino.com">ایمیل: info@safarino.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق محفوظ است &copy; ۱۴۰۲ سفرینو</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

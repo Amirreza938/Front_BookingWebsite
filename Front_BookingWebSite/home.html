@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفرینو - رزرو هتل، پرواز و تجربه‌های سفر</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">سفرینو</div>
+            <ul>
+                <li><a href="home.html" class="active">صفحه اصلی</a></li>
+                <li><a href="search.html">جستجو</a></li>
+                <li><a href="review.html">نقد و بررسی</a></li>
+                <li><a href="profile.html">پروفایل</a></li>
+                <li><a href="auth.html" class="login-btn">ورود / ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>بهترین مقاصد سفر را با ما تجربه کنید</h1>
+                <p>هتل‌ها، پروازها و تجربه‌های مهیج سفر را جستجو کنید</p>
+                
+                <div class="search-tabs">
+                    <div class="tab-buttons">
+                        <a href="#hotels-tab-content" class="tab-btn active">هتل</a>
+                        <a href="#flights-tab-content" class="tab-btn">پرواز</a>
+                        <a href="#experiences-tab-content" class="tab-btn">تجربه‌های سفر</a>
+                    </div>
+                    
+                    <div class="tab-content" id="hotels-tab-content">
+                        <div class="search-form">
+                            <form action="search.html" method="get">
+                                <input type="hidden" name="type" value="hotel">
+                                <div class="form-group">
+                                    <label for="destination">مقصد</label>
+                                    <input type="text" id="destination" placeholder="کجا می‌خواهید بروید؟">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="check-in">تاریخ ورود</label>
+                                        <input type="date" id="check-in">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="check-out">تاریخ خروج</label>
+                                        <input type="date" id="check-out">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="adults">بزرگسالان</label>
+                                        <select id="adults">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="children">کودکان</label>
+                                        <select id="children">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rooms">اتاق</label>
+                                        <select id="rooms">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="search-button">جستجو</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="flights-tab-content">
+                        <div class="search-form">
+                            <form action="search.html" method="get">
+                                <input type="hidden" name="type" value="flight">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="origin">مبدا</label>
+                                        <input type="text" id="origin" name="origin" placeholder="از کجا؟" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="flight-destination">مقصد</label>
+                                        <input type="text" id="flight-destination" name="destination" placeholder="به کجا؟" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="departure-date">تاریخ رفت</label>
+                                        <input type="date" id="departure-date" name="departure_date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="return-date">تاریخ برگشت</label>
+                                        <input type="date" id="return-date" name="return_date">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="flight-class">کلاس پرواز</label>
+                                        <select id="flight-class" name="flight_class">
+                                            <option value="economy">اکونومی</option>
+                                            <option value="business">بیزینس</option>
+                                            <option value="first">فرست کلاس</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="passengers">تعداد مسافر</label>
+                                        <select id="passengers" name="passengers">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="search-button">جستجوی پرواز</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="experiences-tab-content">
+                        <div class="search-form">
+                            <form action="search.html" method="get">
+                                <input type="hidden" name="type" value="experience">
+                                <div class="form-group">
+                                    <label for="experience-destination">مقصد</label>
+                                    <input type="text" id="experience-destination" placeholder="کجا می‌خواهید بروید؟">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="experience-date">تاریخ</label>
+                                        <input type="date" id="experience-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participants">تعداد افراد</label>
+                                        <select id="participants">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="search-button">جستجوی تجربه</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="special-offers">
+            <div class="container">
+                <h2>پیشنهادات ویژه</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <img src="./assests/offer1.jpg" alt="تخفیف ویژه">
+                        <div class="offer-content">
+                            <h3>۳۰٪ تخفیف برای اقامت در کیش</h3>
+                            <p>فرصت محدود - رزرو کنید</p>
+                            <a href="search.html" class="offer-button">مشاهده</a>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <img src="./assests/offer2.jpg" alt="تخفیف ویژه">
+                        <div class="offer-content">
+                            <h3>پروازهای داخلی با ۲۰٪ تخفیف</h3>
+                            <p>برای سفر در تعطیلات عید</p>
+                            <a href="search.html" class="offer-button">مشاهده</a>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <img src="./assests/offer3..jpg" alt="تخفیف ویژه">
+                        <div class="offer-content">
+                            <h3>اقامت و گشت دبی با قیمت استثنایی</h3>
+                            <p>بسته سفر کامل</p>
+                            <a href="search.html" class="offer-button">مشاهده</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="popular-destinations">
+            <div class="container">
+                <h2>مقاصد محبوب</h2>
+                <div class="destinations-grid">
+                    <div class="destination-card">
+                        <img src="./assests/destination1.jpg" alt="استانبول">
+                        <div class="destination-content">
+                            <h3>استانبول</h3>
+                            <p>از ۱,۲۵۰,۰۰۰ تومان</p>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <img src="./assests/destination2.jpg" alt="کیش">
+                        <div class="destination-content">
+                            <h3>کیش</h3>
+                            <p>از ۹۸۰,۰۰۰ تومان</p>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <img src="./assests/destination3.jpg" alt="شیراز">
+                        <div class="destination-content">
+                            <h3>شیراز</h3>
+                            <p>از ۸۵۰,۰۰۰ تومان</p>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <img src="./assests/destination4.jpg" alt="دبی">
+                        <div class="destination-content">
+                            <h3>دبی</h3>
+                            <p>از ۱,۸۰۰,۰۰۰ تومان</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="top-reviews">
+            <div class="container">
+                <h2>نقد و بررسی‌های برتر</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="./assests/user1.jpg" alt="کاربر">
+                            <div>
+                                <h4>محمد احمدی</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">هتل عالی بود، کارکنان بسیار مهربان و خوش برخورد. اتاق تمیز و منظره فوق العاده. حتما دوباره به این هتل سر میزنم.</p>
+                        <p class="review-info">هتل پارسیان، تهران</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="./assests/user2.jpg" alt="کاربر">
+                            <div>
+                                <h4>سارا محمدی</h4>
+                                <div class="rating">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p class="review-text">پرواز به موقع و خدمات پرواز راضی کننده بود. فقط سیستم سرگرمی کمی قدیمی بود.</p>
+                        <p class="review-info">ایران ایر، تهران به مشهد</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="./assests/user3.jpg" alt="کاربر">
+                            <div>
+                                <h4>علی رضایی</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">تور شیراز فوق العاده بود. راهنمای تور بسیار مسلط و با اطلاعات کامل. مکان های دیدنی زیبا و برنامه ریزی عالی.</p>
+                        <p class="review-info">تور گردشگری شیراز</p>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <a href="review.html" class="see-more-button">مشاهده تمام نظرات</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="popular-flights">
+            <div class="container">
+                <h2>پروازهای پرطرفدار</h2>
+                <div class="flights-grid">
+                    <div class="flight-card">
+                        <img src="./assests/flight1.jpg" alt="تهران به استانبول">
+                        <div class="flight-content">
+                            <h3>تهران - استانبول</h3>
+                            <p class="flight-info">پروازهای روزانه</p>
+                            <p class="flight-price">از ۵,۵۰۰,۰۰۰ تومان</p>
+                            <a href="search.html?type=flight&from=tehran&to=istanbul" class="flight-button">مشاهده پروازها</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flight-card">
+                        <img src="./assests/flight2.jpg" alt="تهران به دبی">
+                        <div class="flight-content">
+                            <h3>تهران - دبی</h3>
+                            <p class="flight-info">پروازهای هفتگی</p>
+                            <p class="flight-price">از ۶,۲۰۰,۰۰۰ تومان</p>
+                            <a href="search.html?type=flight&from=tehran&to=dubai" class="flight-button">مشاهده پروازها</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flight-card">
+                        <img src="./assests/flight3.jpg" alt="تهران به مشهد">
+                        <div class="flight-content">
+                            <h3>تهران - مشهد</h3>
+                            <p class="flight-info">چندین پرواز روزانه</p>
+                            <p class="flight-price">از ۱,۸۰۰,۰۰۰ تومان</p>
+                            <a href="search.html?type=flight&from=tehran&to=mashhad" class="flight-button">مشاهده پروازها</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flight-card">
+                        <img src="./assests/flight4.jpg" alt="شیراز به کیش">
+                        <div class="flight-content">
+                            <h3>شیراز - کیش</h3>
+                            <p class="flight-info">پروازهای هفتگی</p>
+                            <p class="flight-price">از ۲,۵۰۰,۰۰۰ تومان</p>
+                            <a href="search.html?type=flight&from=shiraz&to=kish" class="flight-button">مشاهده پروازها</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <a href="search.html?type=flight" class="see-more-button">مشاهده همه پروازها</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سفرینو</h3>
+                    <p>بهترین سایت رزرو هتل، پرواز و تجربه‌های سفر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>پشتیبانی</h3>
+                    <ul>
+                        <li><a href="help.html">راهنما</a></li>
+                        <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                        <li><a href="tel:+982100000000">تلفن: ۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+                        <li><a href="mailto:info@safarino.com">ایمیل: info@safarino.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق محفوظ است &copy; ۱۴۰۲ سفرینو</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

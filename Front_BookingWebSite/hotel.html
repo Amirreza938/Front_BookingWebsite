@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات و رزرو هتل - سفرینو</title>
+    <link rel="stylesheet" href="styles/hotel.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">سفرینو</div>
+            <ul>
+                <li><a href="home.html">صفحه اصلی</a></li>
+                <li><a href="search.html">جستجو</a></li>
+                <li><a href="review.html">نقد و بررسی</a></li>
+                <li><a href="profile.html">پروفایل</a></li>
+                <li><a href="auth.html" class="login-btn">ورود / ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hotel-header">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="home.html">صفحه اصلی</a> &gt;
+                    <a href="search.html">جستجوی هتل</a> &gt;
+                    <span>هتل اسپیناس پالاس</span>
+                </div>
+                <h1>هتل اسپیناس پالاس</h1>
+                <div class="hotel-meta">
+                    <div class="stars">★★★★★</div>
+                    <div class="location"><i class="location-icon"></i> تهران، خیابان ولیعصر</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hotel-gallery">
+            <div class="container">
+                <div class="gallery-container">
+                    <div class="main-image">
+                        <img src="./assests/hotel1.jpg" alt="هتل اسپیناس پالاس">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="./assests/room1.jpg" alt="اتاق هتل">
+                        <img src="./assests/room2.jpg" alt="اتاق هتل">
+                        <img src="./assests/lobby.jpg" alt="لابی هتل">
+                        <img src="./assests/restaurant.jpg" alt="رستوران هتل">
+                        <button class="more-photos">+۱۵ عکس بیشتر</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hotel-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="hotel-description">
+                        <h2>درباره هتل</h2>
+                        <p>هتل اسپیناس پالاس یکی از لوکس‌ترین هتل‌های تهران می‌باشد که با موقعیت عالی در خیابان ولیعصر، دسترسی آسانی به نقاط مختلف شهر را فراهم می‌کند. این هتل دارای اتاق‌های مجهز و مدرن، استخر سرپوشیده، سالن بدنسازی، سالن‌های همایش و رستوران‌های متنوع می‌باشد.</p>
+                        <p>تمامی اتاق‌های هتل از امکانات رفاهی نظیر تلویزیون، مینی‌بار، سرویس بهداشتی مجزا، اینترنت پرسرعت رایگان و تهویه مطبوع برخوردار هستند.</p>
+                        
+                        <h3>امکانات هتل</h3>
+                        <ul class="amenities-list">
+                            <li>وای‌فای رایگان</li>
+                            <li>استخر سرپوشیده</li>
+                            <li>سالن بدنسازی</li>
+                            <li>رستوران</li>
+                            <li>کافی‌شاپ</li>
+                            <li>پارکینگ رایگان</li>
+                            <li>صبحانه رایگان</li>
+                            <li>خدمات اتاق ۲۴ ساعته</li>
+                            <li>لابی مدرن</li>
+                            <li>خدمات خشکشویی</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-summary">
+                        <div class="summary-card">
+                            <div class="rating">
+                                <span class="rating-score">9.2</span>
+                                <span class="rating-text">عالی</span>
+                                <span class="rating-count">(۱۲۳ نظر)</span>
+                            </div>
+                            <div class="price-info">
+                                <span class="price-label">قیمت هر شب از</span>
+                                <div class="price">
+                                    <span class="amount">۱,۸۵۰,۰۰۰</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                            </div>
+                            <a href="#rooms" class="booking-btn">مشاهده اتاق‌ها و رزرو</a>
+                        </div>
+                        
+                        <div class="map-card">
+                            <h3>موقعیت هتل</h3>
+                            <div class="map-container">
+                                <img src="./assests/map.jpg" alt="نقشه موقعیت هتل">
+                            </div>
+                            <p>تهران، خیابان ولیعصر، نرسیده به پارک ساعی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="rooms" class="hotel-rooms">
+            <div class="container">
+                <h2>اتاق‌ها و قیمت</h2>
+                
+                <div class="search-dates">
+                    <form class="dates-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="check-in">تاریخ ورود</label>
+                                <input type="date" id="check-in">
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out">تاریخ خروج</label>
+                                <input type="date" id="check-out">
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">تعداد مهمان</label>
+                                <select id="guests">
+                                    <option>۱ نفر</option>
+                                    <option>۲ نفر</option>
+                                    <option>۳ نفر</option>
+                                    <option>۴ نفر</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="search-button">جستجوی قیمت</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="rooms-list">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assests/standard-room.jpg" alt="اتاق استاندارد">
+                        </div>
+                        <div class="room-details">
+                            <h3>اتاق استاندارد</h3>
+                            <div class="room-amenities">
+                                <span>۳۲ متر مربع</span>
+                                <span>۱ تخت دو نفره</span>
+                                <span>حداکثر ۲ نفر</span>
+                            </div>
+                            <ul class="room-features">
+                                <li>وای‌فای رایگان</li>
+                                <li>صبحانه رایگان</li>
+                                <li>تلویزیون</li>
+                                <li>مینی‌بار</li>
+                                <li>سرویس بهداشتی</li>
+                            </ul>
+                        </div>
+                        <div class="room-booking">
+                            <div class="room-price">
+                                <span class="price-label">قیمت هر شب</span>
+                                <div class="price">
+                                    <span class="amount">۱,۸۵۰,۰۰۰</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn">رزرو اتاق</button>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assests/deluxe-room.jpg" alt="اتاق دلوکس">
+                        </div>
+                        <div class="room-details">
+                            <h3>اتاق دلوکس</h3>
+                            <div class="room-amenities">
+                                <span>۴۵ متر مربع</span>
+                                <span>۱ تخت کینگ</span>
+                                <span>حداکثر ۲ نفر</span>
+                            </div>
+                            <ul class="room-features">
+                                <li>وای‌فای رایگان</li>
+                                <li>صبحانه رایگان</li>
+                                <li>تلویزیون بزرگ</li>
+                                <li>مینی‌بار</li>
+                                <li>سرویس بهداشتی مجهز</li>
+                                <li>منظره شهر</li>
+                            </ul>
+                        </div>
+                        <div class="room-booking">
+                            <div class="room-price">
+                                <span class="price-label">قیمت هر شب</span>
+                                <div class="price">
+                                    <span class="amount">۲,۵۰۰,۰۰۰</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn">رزرو اتاق</button>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assests/suite-room.png" alt="سوئیت">
+                        </div>
+                        <div class="room-details">
+                            <h3>سوئیت رویال</h3>
+                            <div class="room-amenities">
+                                <span>۶۰ متر مربع</span>
+                                <span>۱ تخت کینگ</span>
+                                <span>حداکثر ۳ نفر</span>
+                            </div>
+                            <ul class="room-features">
+                                <li>وای‌فای رایگان</li>
+                                <li>صبحانه رایگان</li>
+                                <li>تلویزیون بزرگ</li>
+                                <li>مینی‌بار</li>
+                                <li>جکوزی اختصاصی</li>
+                                <li>پذیرایی VIP</li>
+                                <li>منظره پانوراما</li>
+                            </ul>
+                        </div>
+                        <div class="room-booking">
+                            <div class="room-price">
+                                <span class="price-label">قیمت هر شب</span>
+                                <div class="price">
+                                    <span class="amount">۳,۸۰۰,۰۰۰</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn">رزرو اتاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="booking-form" class="booking-section">
+            <div class="container">
+                <h2>فرم رزرو هتل</h2>
+                <div class="form-container">
+                    <form class="booking-form">
+                        <div class="form-section">
+                            <h3>اطلاعات مهمان</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">نام</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">نام خانوادگی</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="national-id">کد ملی</label>
+                                    <input type="text" id="national-id" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">شماره تماس</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">ایمیل</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guests-count">تعداد مهمانان</label>
+                                    <select id="guests-count" required>
+                                        <option value="1">۱ نفر</option>
+                                        <option value="2" selected>۲ نفر</option>
+                                        <option value="3">۳ نفر</option>
+                                        <option value="4">۴ نفر</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>جزئیات رزرو</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="check-in-date">تاریخ ورود</label>
+                                    <input type="date" id="check-in-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="check-out-date">تاریخ خروج</label>
+                                    <input type="date" id="check-out-date" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="room-type">نوع اتاق</label>
+                                    <select id="room-type" required>
+                                        <option value="">انتخاب کنید</option>
+                                        <option value="standard">اتاق استاندارد</option>
+                                        <option value="deluxe">اتاق دلوکس</option>
+                                        <option value="suite">سوئیت رویال</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="special-requests">درخواست های ویژه</label>
+                                    <textarea id="special-requests" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>اطلاعات پرداخت</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-number">شماره کارت</label>
+                                    <input type="text" id="card-number" placeholder="شماره ۱۶ رقمی کارت">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">تاریخ انقضا</label>
+                                    <input type="text" id="card-expiry" placeholder="ماه/سال">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv2">CVV2</label>
+                                    <input type="text" id="cvv2" placeholder="CVV2">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-summary-box">
+                            <h3>خلاصه رزرو</h3>
+                            <div class="summary-row">
+                                <span>نوع اتاق:</span>
+                                <span id="summary-room-type">اتاق دلوکس</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>تعداد شب:</span>
+                                <span id="summary-nights">۲ شب</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>قیمت هر شب:</span>
+                                <span id="summary-price-per-night">۲,۵۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>مالیات و عوارض:</span>
+                                <span id="summary-tax">۲۵۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>مجموع:</span>
+                                <span id="summary-total">۵,۲۵۰,۰۰۰ تومان</span>
+                            </div>
+                        </div>
+                        
+                        <div class="terms-agreement">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">قوانین و مقررات را مطالعه کرده و می‌پذیرم</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">پرداخت و تکمیل رزرو</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hotel-reviews">
+            <div class="container">
+                <div class="reviews-header">
+                    <h2>نظرات مهمانان</h2>
+                    <div class="rating-summary">
+                        <div class="overall-rating">
+                            <span class="big-rating">9.2</span>
+                            <span class="rating-text">عالی</span>
+                        </div>
+                        <div class="rating-categories">
+                            <div class="rating-item">
+                                <span class="category">تمیزی</span>
+                                <div class="bar-rating">
+                                    <div class="bar" style="width: 95%"></div>
+                                </div>
+                                <span class="score">9.5</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="category">راحتی</span>
+                                <div class="bar-rating">
+                                    <div class="bar" style="width: 92%"></div>
+                                </div>
+                                <span class="score">9.2</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="category">موقعیت</span>
+                                <div class="bar-rating">
+                                    <div class="bar" style="width: 90%"></div>
+                                </div>
+                                <span class="score">9.0</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="category">خدمات</span>
+                                <div class="bar-rating">
+                                    <div class="bar" style="width: 94%"></div>
+                                </div>
+                                <span class="score">9.4</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="category">ارزش</span>
+                                <div class="bar-rating">
+                                    <div class="bar" style="width: 88%"></div>
+                                </div>
+                                <span class="score">8.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./assests/user1.jpg" alt="کاربر">
+                            <div>
+                                <h4>محمد احمدی</h4>
+                                <span class="review-date">۲ هفته پیش</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-rating">★★★★★</div>
+                            <p>هتل عالی بود، کارکنان بسیار مهربان و خوش برخورد. اتاق تمیز و منظره فوق العاده. حتما دوباره به این هتل سر میزنم. صبحانه متنوع و خوشمزه و امکانات هتل کامل بود.</p>
+                            <div class="room-stayed">اتاق استاندارد - اقامت ۲ شب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./assests/user2.jpg" alt="کاربر">
+                            <div>
+                                <h4>سارا محمدی</h4>
+                                <span class="review-date">۱ ماه پیش</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-rating">★★★★☆</div>
+                            <p>موقعیت هتل عالی بود و دسترسی به مراکز خرید و تفریحی آسان بود. خدمات خوب و کارکنان مودب. تنها ایراد، سر و صدای خیابان در طبقات پایین بود.</p>
+                            <div class="room-stayed">اتاق دلوکس - اقامت ۳ شب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./assests/user3.jpg" alt="کاربر">
+                            <div>
+                                <h4>علی رضایی</h4>
+                                <span class="review-date">۲ ماه پیش</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-rating">★★★★★</div>
+                            <p>سوئیت رویال فوق‌العاده بود. منظره و امکانات عالی، سرویس و خدمات VIP واقعا ارزشمند بود. صبحانه متنوع و لذیذ. قطعا برای اقامت‌های بعدی هم این هتل رو انتخاب می‌کنم.</p>
+                            <div class="room-stayed">سوئیت رویال - اقامت ۵ شب</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show-more-reviews">
+                    <button class="show-more-btn">نمایش نظرات بیشتر</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سفرینو</h3>
+                    <p>بهترین سایت رزرو هتل، پرواز و تجربه‌های سفر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>پشتیبانی</h3>
+                    <ul>
+                        <li><a href="help.html">راهنما</a></li>
+                        <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                        <li><a href="tel:+982100000000">تلفن: ۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+                        <li><a href="mailto:info@safarino.com">ایمیل: info@safarino.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق محفوظ است &copy; ۱۴۰۲ سفرینو</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقد و بررسی - سفرینو</title>
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">سفرینو</div>
+            <ul>
+                <li><a href="home.html">صفحه اصلی</a></li>
+                <li><a href="search.html">جستجو</a></li>
+                <li><a href="review.html" class="active">نقد و بررسی</a></li>
+                <li><a href="profile.html">پروفایل</a></li>
+                <li><a href="auth.html" class="login-btn">ورود / ثبت نام</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="review-header">
+            <div class="container">
+                <h1>نقد و بررسی‌ها</h1>
+                <p>نظرات کاربران درباره هتل‌ها و پروازها را مشاهده کنید و تجربه‌های خود را به اشتراک بگذارید</p>
+            </div>
+        </section>
+        
+        <section class="review-content">
+            <div class="container">
+                <div id="all-tab"></div>
+                <div id="hotel-tab"></div>
+                <div id="flight-tab"></div>
+                
+                <div class="review-filters">
+                    <div class="filter-tabs">
+                        <a href="#all-tab" class="tab-btn active">همه نظرات</a>
+                        <a href="#hotel-tab" class="tab-btn">هتل‌ها</a>
+                        <a href="#flight-tab" class="tab-btn">پروازها</a>
+                    </div>
+                    
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label for="rating-filter">فیلتر بر اساس امتیاز:</label>
+                            <select id="rating-filter">
+                                <option value="all">همه امتیازات</option>
+                                <option value="5">۵ ستاره</option>
+                                <option value="4">۴ ستاره و بالاتر</option>
+                                <option value="3">۳ ستاره و بالاتر</option>
+                                <option value="2">۲ ستاره و بالاتر</option>
+                                <option value="1">۱ ستاره و بالاتر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sort-filter">مرتب‌سازی:</label>
+                            <select id="sort-filter">
+                                <option value="newest">جدیدترین</option>
+                                <option value="rating-high">بیشترین امتیاز</option>
+                                <option value="rating-low">کمترین امتیاز</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <!-- Hotel Reviews -->
+                    <div class="review-item" data-type="hotel">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="./assests/user1.jpg" alt="کاربر">
+                                    <div>
+                                        <h3>محمد احمدی</h3>
+                                        <span class="review-date">۲ هفته پیش</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-text">۵.۰</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-body">
+                                <h4><a href="hotel.html">هتل اسپیناس پالاس</a></h4>
+                                <p>هتل عالی بود، کارکنان بسیار مهربان و خوش برخورد. اتاق تمیز و منظره فوق العاده. حتما دوباره به این هتل سر میزنم. صبحانه متنوع و خوشمزه و امکانات هتل کامل بود.</p>
+                                <div class="review-details">
+                                    <span class="review-location">تهران</span>
+                                    <span class="review-stay">اتاق استاندارد - اقامت ۲ شب</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-footer">
+                                <div class="review-actions">
+                                    <button class="like-btn">
+                                        <span class="like-icon">👍</span>
+                                        <span class="like-count">24</span>
+                                    </button>
+                                    <button class="comment-btn">پاسخ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item" data-type="flight">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="./assests/user2.jpg" alt="کاربر">
+                                    <div>
+                                        <h3>سارا محمدی</h3>
+                                        <span class="review-date">۱ ماه پیش</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">★★★★☆</div>
+                                    <span class="rating-text">۴.۰</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-body">
+                                <h4><a href="flight.html">پرواز تهران به مشهد - ایران ایر</a></h4>
+                                <p>پرواز به موقع و خدمات پرواز راضی کننده بود. فقط سیستم سرگرمی کمی قدیمی بود. کارکنان مهربان و خدمات دهی خوب انجام میشد. غذای پرواز هم نسبتا خوب بود.</p>
+                                <div class="review-details">
+                                    <span class="review-flight">شماره پرواز: IR-721</span>
+                                    <span class="review-date-flight">تاریخ: ۵ شهریور ۱۴۰۲</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-footer">
+                                <div class="review-actions">
+                                    <button class="like-btn">
+                                        <span class="like-icon">👍</span>
+                                        <span class="like-count">18</span>
+                                    </button>
+                                    <button class="comment-btn">پاسخ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item" data-type="hotel">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="./assests/user3.jpg" alt="کاربر">
+                                    <div>
+                                        <h3>علی رضایی</h3>
+                                        <span class="review-date">۲ ماه پیش</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-text">۵.۰</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-body">
+                                <h4><a href="hotel.html">هتل پارسیان آزادی</a></h4>
+                                <p>سوئیت رویال فوق‌العاده بود. منظره و امکانات عالی، سرویس و خدمات VIP واقعا ارزشمند بود. صبحانه متنوع و لذیذ. قطعا برای اقامت‌های بعدی هم این هتل رو انتخاب می‌کنم.</p>
+                                <div class="review-details">
+                                    <span class="review-location">تهران</span>
+                                    <span class="review-stay">سوئیت رویال - اقامت ۵ شب</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-footer">
+                                <div class="review-actions">
+                                    <button class="like-btn">
+                                        <span class="like-icon">👍</span>
+                                        <span class="like-count">32</span>
+                                    </button>
+                                    <button class="comment-btn">پاسخ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item" data-type="flight">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="./assests/user4.jpg" alt="کاربر">
+                                    <div>
+                                        <h3>زهرا کریمی</h3>
+                                        <span class="review-date">۳ ماه پیش</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">★★★☆☆</div>
+                                    <span class="rating-text">۳.۰</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-body">
+                                <h4><a href="flight.html">پرواز تهران به شیراز - ماهان ایر</a></h4>
+                                <p>پرواز با تاخیر انجام شد ولی خدمات داخل پرواز نسبتا خوب بود. صندلی‌ها کمی فرسوده بودند و فضای پا محدود بود. پذیرایی متوسط ارائه شد.</p>
+                                <div class="review-details">
+                                    <span class="review-flight">شماره پرواز: W5-1057</span>
+                                    <span class="review-date-flight">تاریخ: ۱۲ مرداد ۱۴۰۲</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-footer">
+                                <div class="review-actions">
+                                    <button class="like-btn">
+                                        <span class="like-icon">👍</span>
+                                        <span class="like-count">7</span>
+                                    </button>
+                                    <button class="comment-btn">پاسخ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item" data-type="hotel">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <img src="./assests/user5.jpg" alt="کاربر">
+                                    <div>
+                                        <h3>حسن نوروزی</h3>
+                                        <span class="review-date">۱ هفته پیش</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <div class="stars">★★☆☆☆</div>
+                                    <span class="rating-text">۲.۰</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-body">
+                                <h4><a href="hotel.html">هتل هما</a></h4>
+                                <p>متأسفانه نظافت اتاق خوب نبود. صدای زیادی از بیرون به اتاق می‌رسید و خواب راحتی نداشتم. صبحانه معمولی بود و از کیفیت غذای رستوران راضی نبودم.</p>
+                                <div class="review-details">
+                                    <span class="review-location">تهران</span>
+                                    <span class="review-stay">اتاق استاندارد - اقامت ۳ شب</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-footer">
+                                <div class="review-actions">
+                                    <button class="like-btn">
+                                        <span class="like-icon">👍</span>
+                                        <span class="like-count">3</span>
+                                    </button>
+                                    <button class="comment-btn">پاسخ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#page1" class="page-btn active">1</a>
+                    <a href="#page2" class="page-btn">2</a>
+                    <a href="#page3" class="page-btn">3</a>
+                    <span class="page-dots">...</span>
+                    <a href="#page10" class="page-btn">10</a>
+                    <a href="#page2" class="page-btn next">بعدی &rarr;</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="submit-review">
+            <div class="container">
+                <h2>ثبت نظر جدید</h2>
+                <div class="review-form-container">
+                    <form class="review-form">
+                        <div class="form-group">
+                            <label for="review-type">نوع بررسی</label>
+                            <select id="review-type" required>
+                                <option value="">انتخاب کنید</option>
+                                <option value="hotel">هتل</option>
+                                <option value="flight">پرواز</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group item-search">
+                            <label for="review-item">نام هتل یا پرواز</label>
+                            <input type="text" id="review-item" placeholder="جستجو کنید..." required>
+                            <div class="search-results">
+                                <div class="search-item">هتل اسپیناس پالاس، تهران</div>
+                                <div class="search-item">هتل پارسیان آزادی، تهران</div>
+                                <div class="search-item">هتل هما، تهران</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>امتیاز شما</label>
+                            <div class="rating-input">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-title">عنوان نظر</label>
+                            <input type="text" id="review-title" placeholder="عنوان کوتاه برای نظر شما" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-text">متن نظر</label>
+                            <textarea id="review-text" rows="5" placeholder="تجربه خود را با دیگران به اشتراک بگذارید..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-photos">افزودن تصاویر (اختیاری)</label>
+                            <input type="file" id="review-photos" accept="image/*" multiple>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">ارسال نظر</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سفرینو</h3>
+                    <p>بهترین سایت رزرو هتل، پرواز و تجربه‌های سفر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>پشتیبانی</h3>
+                    <ul>
+                        <li><a href="help.html">راهنما</a></li>
+                        <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                        <li><a href="tel:+982100000000">تلفن: ۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+                        <li><a href="mailto:info@safarino.com">ایمیل: info@safarino.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق محفوظ است &copy; ۱۴۰۲ سفرینو</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

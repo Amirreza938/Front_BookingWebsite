@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل کاربر - سفرینو</title>
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">سفرینو</div>
+            <ul>
+                <li><a href="home.html">صفحه اصلی</a></li>
+                <li><a href="search.html">جستجو</a></li>
+                <li><a href="review.html">نقد و بررسی</a></li>
+                <li><a href="profile.html" class="active">پروفایل</a></li>
+                <li><a href="auth.html" class="login-btn">خروج</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="profile-header">
+            <div class="container">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="./assests/user1.jpg" alt="تصویر کاربر">
+                    </div>
+                    <div class="user-details">
+                        <h1>علی محمدی</h1>
+                        <p class="user-since">عضویت از: فروردین ۱۴۰۱</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="profile-content">
+            <div class="container">
+                <div class="profile-tabs">
+                    <a href="#personal-info" class="tab-btn active">اطلاعات شخصی</a>
+                    <a href="#bookings" class="tab-btn">رزروها</a>
+                    <a href="#transactions" class="tab-btn">تراکنش‌ها</a>
+                </div>
+                
+                <div class="tab-content" id="personal-info">
+                    <div class="info-card">
+                        <h2>اطلاعات شخصی</h2>
+                        <form class="personal-info-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">نام</label>
+                                    <input type="text" id="first-name" value="علی">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">نام خانوادگی</label>
+                                    <input type="text" id="last-name" value="محمدی">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">ایمیل</label>
+                                    <input type="email" id="email" value="ali.mohammadi@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">شماره تلفن</label>
+                                    <input type="tel" id="phone" value="۰۹۱۲۳۴۵۶۷۸۹">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="national-id">کد ملی</label>
+                                    <input type="text" id="national-id" value="۱۲۳۴۵۶۷۸۹۰">
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthdate">تاریخ تولد</label>
+                                    <input type="date" id="birthdate" value="1985-06-15">
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">ذخیره تغییرات</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h2>تغییر رمز عبور</h2>
+                        <form class="password-form">
+                            <div class="form-group">
+                                <label for="current-password">رمز عبور فعلی</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">رمز عبور جدید</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">تکرار رمز عبور جدید</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">تغییر رمز عبور</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="bookings">
+                    <div class="bookings-container">
+                        <h2>رزروهای شما</h2>
+                        
+                        <div class="booking-filters">
+                            <a href="#bookings" class="filter-btn active">همه</a>
+                            <a href="#bookings-hotel" class="filter-btn">هتل‌ها</a>
+                            <a href="#bookings-flight" class="filter-btn">پروازها</a>
+                            <a href="#bookings-experience" class="filter-btn">تجربه‌های سفر</a>
+                        </div>
+                        
+                        <div class="booking-list">
+                            <div class="booking-item">
+                                <div class="booking-icon hotel-icon"></div>
+                                <div class="booking-details">
+                                    <h3>هتل اسپیناس پالاس</h3>
+                                    <div class="booking-meta">
+                                        <span class="booking-date">۱۵ تا ۱۸ مرداد ۱۴۰۲</span>
+                                        <span class="booking-location">تهران</span>
+                                        <span class="booking-status confirmed">تایید شده</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <div class="info-item">
+                                            <span class="info-label">شماره رزرو:</span>
+                                            <span class="info-value">HTL-12345</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">تعداد مهمان:</span>
+                                            <span class="info-value">۲ نفر</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">نوع اتاق:</span>
+                                            <span class="info-value">اتاق دو تخته</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="hotel.html" class="btn-secondary">مشاهده جزئیات</a>
+                                </div>
+                            </div>
+                            
+                            <div class="booking-item">
+                                <div class="booking-icon flight-icon"></div>
+                                <div class="booking-details">
+                                    <h3>پرواز تهران به مشهد</h3>
+                                    <div class="booking-meta">
+                                        <span class="booking-date">۵ شهریور ۱۴۰۲</span>
+                                        <span class="booking-location">ایران ایر</span>
+                                        <span class="booking-status confirmed">تایید شده</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <div class="info-item">
+                                            <span class="info-label">شماره رزرو:</span>
+                                            <span class="info-value">FLT-54321</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">شماره پرواز:</span>
+                                            <span class="info-value">IR-721</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">تعداد مسافر:</span>
+                                            <span class="info-value">۱ نفر</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="flight.html" class="btn-secondary">مشاهده جزئیات</a>
+                                </div>
+                            </div>
+                            
+                            <div class="booking-item">
+                                <div class="booking-icon hotel-icon"></div>
+                                <div class="booking-details">
+                                    <h3>هتل پارسیان آزادی</h3>
+                                    <div class="booking-meta">
+                                        <span class="booking-date">۲۰ تا ۲۵ خرداد ۱۴۰۲</span>
+                                        <span class="booking-location">تهران</span>
+                                        <span class="booking-status completed">تکمیل شده</span>
+                                    </div>
+                                    <div class="booking-info">
+                                        <div class="info-item">
+                                            <span class="info-label">شماره رزرو:</span>
+                                            <span class="info-value">HTL-98765</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">تعداد مهمان:</span>
+                                            <span class="info-value">۲ نفر</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">نوع اتاق:</span>
+                                            <span class="info-value">سوئیت</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="#" class="btn-secondary">مشاهده جزئیات</a>
+                                    <a href="#" class="btn-outline">ثبت نظر</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="transactions">
+                    <div class="transactions-container">
+                        <h2>تراکنش‌های شما</h2>
+                        
+                        <div class="transactions-summary">
+                            <div class="summary-card">
+                                <span class="summary-title">مجموع پرداختی‌ها</span>
+                                <span class="summary-value">۹,۳۷۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="summary-card">
+                                <span class="summary-title">تعداد تراکنش‌ها</span>
+                                <span class="summary-value">۵</span>
+                            </div>
+                            <div class="summary-card">
+                                <span class="summary-title">رزروهای در انتظار پرداخت</span>
+                                <span class="summary-value">۱</span>
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-table-container">
+                            <table class="transaction-table">
+                                <thead>
+                                    <tr>
+                                        <th>شماره تراکنش</th>
+                                        <th>تاریخ</th>
+                                        <th>توضیحات</th>
+                                        <th>روش پرداخت</th>
+                                        <th>مبلغ</th>
+                                        <th>وضعیت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TRX-12345</td>
+                                        <td>۱۵ مرداد ۱۴۰۲</td>
+                                        <td>رزرو هتل اسپیناس پالاس</td>
+                                        <td>کارت بانکی</td>
+                                        <td>۵,۵۵۰,۰۰۰ تومان</td>
+                                        <td><span class="status-badge paid">پرداخت شده</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-23456</td>
+                                        <td>۲۸ تیر ۱۴۰۲</td>
+                                        <td>رزرو پرواز تهران به مشهد</td>
+                                        <td>کارت بانکی</td>
+                                        <td>۲,۰۰۰,۰۰۰ تومان</td>
+                                        <td><span class="status-badge paid">پرداخت شده</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-34567</td>
+                                        <td>۱۰ خرداد ۱۴۰۲</td>
+                                        <td>رزرو هتل پارسیان آزادی</td>
+                                        <td>کیف پول</td>
+                                        <td>۱,۸۲۰,۰۰۰ تومان</td>
+                                        <td><span class="status-badge paid">پرداخت شده</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-45678</td>
+                                        <td>۵ اردیبهشت ۱۴۰۲</td>
+                                        <td>رزرو تور شیراز</td>
+                                        <td>کارت بانکی</td>
+                                        <td>۳,۵۰۰,۰۰۰ تومان</td>
+                                        <td><span class="status-badge pending">در انتظار پرداخت</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سفرینو</h3>
+                    <p>بهترین سایت رزرو هتل، پرواز و تجربه‌های سفر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های مفید</h3>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="terms.html">قوانین و مقررات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>پشتیبانی</h3>
+                    <ul>
+                        <li><a href="help.html">راهنما</a></li>
+                        <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                        <li><a href="tel:+982100000000">تلفن: ۰۲۱-۰۰۰۰۰۰۰۰</a></li>
+                        <li><a href="mailto:info@safarino.com">ایمیل: info@safarino.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>تمامی حقوق محفوظ است &copy; ۱۴۰۲ سفرینو</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
